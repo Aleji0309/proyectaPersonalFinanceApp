@@ -14,8 +14,8 @@ export const Sidebar = () => {
       <h2 className="text-2xl text-white">finance</h2>
       <div className="link-container grid grid-flow-col grid-rows-6 gap-4 mt-8">
         <Link
-          href="/overview"
-          className="group flex items-center gap-3 rounded-xs px-3 py-2
+          href="/"
+          className="group flex items-center gap-3 rounded-r-lg w-3xs px-3 py-2 
                     text-(--text-secondary)
                     hover:bg-white hover:text-black
                     transition-colors"
@@ -32,7 +32,7 @@ export const Sidebar = () => {
 
         <Link
           href="/transactions"
-          className="group flex items-center gap-3 rounded-xs px-3 py-2
+          className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                       text-(--text-secondary)
                     hover:bg-white hover:text-black
                       transition-colors"
@@ -49,7 +49,7 @@ export const Sidebar = () => {
 
         <Link
           href="/budgets"
-          className="group flex items-center gap-3 rounded-xs px-3 py-2
+          className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                     text-(--text-secondary)
                   hover:bg-white hover:text-black
                     transition-colors"
@@ -66,7 +66,7 @@ export const Sidebar = () => {
 
         <Link
           href="/pots"
-          className="group flex items-center gap-3 rounded-xs px-3 py-2
+          className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                     text-(--text-secondary)
                     hover:bg-white hover:text-black
                     transition-colors"
@@ -83,7 +83,7 @@ export const Sidebar = () => {
 
         <Link
           href="/recurringBills"
-          className="group flex items-center gap-3 rounded-xs px-3 py-2
+          className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                     text-(--text-secondary)
                   hover:bg-white hover:text-black
                     transition-colors"

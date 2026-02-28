@@ -4,9 +4,10 @@
   /* Backgrounds */
   --bg-main: #0F172A;        /* Fondo general app */
   --bg-sidebar: #0B0F19;     /* Sidebar */
-  --bg-card: #1E293B;        /* Cards */
+  --bg-card: #ffffff;        /* Cards */
   --bg-hover: #1F2937;       /* Hover sutil */
-  --bg-white: #F3F4F6;
+  --bg-white: #ffffff;
+  --bg-beige: #fdf5e6;
   
 
   /* Text */
@@ -29,12 +30,28 @@
 }
 
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), sans-serif;
+.card {
+  padding: 1rem;
+  background-color: var(--bg-card);
+  border-radius: 0.5rem;
+  box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
 }
 
-.sidebar-hover {
-  background: var(--bg-white);
+.card:hover {
+  background-color: var(--bg-main);
+  color: var(--bg-white);
+}
+
+.card-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 2rem;
 }

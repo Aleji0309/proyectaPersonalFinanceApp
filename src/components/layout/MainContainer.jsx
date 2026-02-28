@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const MainContainer = () => {
+export const MainContainer = ({children}) => {
   return (
-    <div className='bg-blue-600' >Main Container</div>
+    <section className="bg-(--bg-white) p-8 min-h-screen overflow-y-auto">
+      {children}
+    </section>
   )
 }

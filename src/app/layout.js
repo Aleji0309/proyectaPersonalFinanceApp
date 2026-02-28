@@ -14,14 +14,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.variable}>
          {/* Contenedor de la app */}
-          <div className="root-container grid grid-cols-3 gap-4">
+          <div className="root-container grid grid-cols-6">
           {/* Contenedor del Sidebar */}
           <div className="sidebar-container col-span-1">
             <Sidebar />
           </div>
 
            {/* Contenedor del main */}
-          <div className="main-container  col-span-2">
+          <div className="main-container col-span-5">
             <MainContainer >
             <main>{children}</main>
             </MainContainer>
