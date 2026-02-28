@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+
+
 import React from "react";
 import {
   House,
@@ -11,7 +14,16 @@ import {
 export const Sidebar = () => {
   return (
     <div className="sidebar-container bg-(--bg-sidebar) text-(--text-secondary) min-h-screen">
-      <h2 className="text-2xl text-white">finance</h2>
+      {/* Logo */}
+  <div className="logo-section py-6">
+    <Image
+      src="/logoFondo-removebg-preview.png"
+      alt="Logo Empresa"
+      width={120}
+      height={40}
+      className="object-contain"
+    />
+  </div>
       <div className="link-container grid grid-flow-col grid-rows-6 gap-4 mt-8">
         <Link
           href="/"
