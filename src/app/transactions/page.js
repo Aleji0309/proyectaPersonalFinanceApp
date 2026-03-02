@@ -1,5 +1,16 @@
+import { CardContainer } from "@/components/layout/CardContainer"
+import { TransactionsContainer } from "@/components/transactions/TransactionsContainer"
+
 export default function showTransactions(){ 
      return (
-    <div className="">test showTransactions</div>
+    <>
+            <h2 className="text-3xl mb-8 my-8 font-bold">Transactions</h2>
+            <CardContainer
+                currentBalance={5000}
+                incomeBalance={5000}
+                expenseBalance={5000}
+            />
+            <TransactionsContainer/>
+        </>
   );
  };
