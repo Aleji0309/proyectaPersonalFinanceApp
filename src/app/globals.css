@@ -5,15 +5,16 @@
 
 :root {
   /* Backgrounds */
-  --bg-main: #0F172A;        /* Fondo general app */
-  --bg-sidebar: #0B0F19;     /* Sidebar */
-  --bg-card: #ffffff;        /* Cards */
-  --bg-hover: #1F2937;       /* Hover sutil */
+  --bg-main: #0F172A;        
+  --bg-sidebar: #0B0F19;     
+  --bg-card: #ffffff;        
+  --bg-hover: #1F2937;     
   --bg-white: #ffffff;
   --bg-beige: #fdf5e6;
+  --bg-table-header: #F9FAFB;
 
   /* Text */
-  --text-primary: #F3F4F6;   /* Texto principal */
+  --text-primary: #F3F4F6;   
   --text-secondary: #9CA3AF; /* Texto secundario */
   --text-muted: #6B7280;     /* Texto desactivado */
 
@@ -63,13 +64,17 @@
   --sidebar-ring: oklch(0.705 0.015 286.067);
 }
 
+.shadow-box {
+  border-radius: 0.5rem;
+   box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+}
+
 .card {
   padding: 1rem;
   background-color: var(--bg-card);
-  border-radius: 0.5rem;
-  box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
--webkit-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+  
 }
 
 .card:hover {
@@ -87,6 +92,42 @@
 .card-price {
   font-weight: bold;
   font-size: 2rem;
+}
+
+
+.transactions-container  {
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
+.table_component {
+    overflow: auto;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.table_component table {
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+}
+
+
+
+.table_component th {
+    background-color: var(--bg-table-header);
+    color: var(--text-secondary);
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+.table_component td {
+    color: var(--text-muted);
+    padding: 1rem 0;
+    font-size: 0.8rem;
 }
 
 @theme inline {
