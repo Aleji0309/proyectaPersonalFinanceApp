@@ -5,31 +5,31 @@
 
 :root {
   /* Backgrounds */
-  --bg-main: #0F172A;        
-  --bg-sidebar: #0B0F19;     
-  --bg-card: #ffffff;        
-  --bg-hover: #1F2937;     
+  --bg-main: #0f172a;
+  --bg-sidebar: #0b0f19;
+  --bg-card: #ffffff;
+  --bg-hover: #1f2937;
   --bg-white: #ffffff;
   --bg-beige: #fdf5e6;
-  --bg-table-header: #F9FAFB;
+  --bg-table-header: #f9fafb;
 
   /* Text */
-  --text-primary: #F3F4F6;   
-  --text-secondary: #9CA3AF; /* Texto secundario */
-  --text-muted: #6B7280;     /* Texto desactivado */
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af; /* Texto secundario */
+  --text-muted: #6b7280; /* Texto desactivado */
 
   /* Accent */
-  --accent-primary: #22C55E; /* Verde finanzas */
-  --accent-hover: #16A34A;   /* Verde más fuerte */
+  --accent-primary: #22c55e; /* Verde finanzas */
+  --accent-hover: #16a34a; /* Verde más fuerte */
 
   /* Borders */
-  --border-color: #1F2937;
+  --border-color: #1f2937;
 
   /* Danger / Expense */
-  --danger: #EF4444;
+  --danger: #ef4444;
 
   /* Income */
-  --income: #22C55E;
+  --income: #22c55e;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -66,15 +66,20 @@
 
 .shadow-box {
   border-radius: 0.5rem;
-   box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
--webkit-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 4px 9px 17px -2px rgba(0,0,0,0.75);
+  box-shadow: 4px 9px 17px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 9px 17px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 9px 17px -2px rgba(0, 0, 0, 0.75);
+}
+
+.flex-containers {
+  display: flex;
+  align-items: center;
+  gap: 8;
 }
 
 .card {
   padding: 1rem;
   background-color: var(--bg-card);
-  
 }
 
 .card:hover {
@@ -91,43 +96,40 @@
 
 .card-price {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-
-.transactions-container  {
+.transactions-container {
   margin-top: 4rem;
   padding: 1rem;
 }
 
 .table_component {
-    overflow: auto;
-    width: 100%;
-    margin-top: 2rem;
+  overflow: auto;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .table_component table {
-    height: 100%;
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 1px;
-    text-align: left;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
 }
 
-
-
 .table_component th {
-    background-color: var(--bg-table-header);
-    color: var(--text-secondary);
-    padding: 1rem 0;
-    font-size: 0.8rem;
+  background-color: var(--bg-table-header);
+  color: var(--text-secondary);
+  padding: 1rem 0;
+  font-size: 0.8rem;
 }
 
 .table_component td {
-    color: var(--text-muted);
-    padding: 1rem 0;
-    font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 1rem 0;
+  font-size: 0.8rem;
 }
 
 @theme inline {

@@ -60,7 +60,14 @@ export const TransactionsContainer = () => {
         </div>
 
         <div className="transaction-container-history">
-          <TransactionsTable></TransactionsTable>
+          <TransactionsTable
+            company={"Interconxs"}
+            transaction={1245}
+            amout={3500}
+            statusTransaction={"pending"}
+            date={"2023-08-23"}
+            timeTransaction={1000}
+          ></TransactionsTable>
         </div>
       </div>
     </>
