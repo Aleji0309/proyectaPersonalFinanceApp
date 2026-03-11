@@ -44,9 +44,7 @@ export const TransactionsContainer = () => {
 
           <Select className="w-5">
             <SelectTrigger>
-               <Funnel
-              size={18}
-            />
+              <Funnel size={18} />
               <SelectValue placeholder="Filters" />
             </SelectTrigger>
             <SelectContent>
@@ -61,12 +59,13 @@ export const TransactionsContainer = () => {
 
         <div className="transaction-container-history">
           <TransactionsTable
-            company={"Interconxs"}
-            transaction={1245}
-            amout={3500}
-            statusTransaction={"pending"}
-            date={"2023-08-23"}
-            timeTransaction={1000}
+            companyTitle={"Company Name"}
+            companyData={"Interconxs"}
+            transactionData={1245}
+            amoutData={3500}
+            statusData={"pending"}
+            dateData={"2023-08-23"}
+            timeData={1000}
           ></TransactionsTable>
         </div>
       </div>
