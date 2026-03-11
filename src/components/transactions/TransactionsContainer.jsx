@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { TransactionsTable } from "./TransactionsTable";
+import { TransactionsTable } from "../layout/DataTable";
 
 export const TransactionsContainer = () => {
   return (
