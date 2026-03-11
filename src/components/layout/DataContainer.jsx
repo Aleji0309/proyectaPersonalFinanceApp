@@ -9,21 +9,28 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { DataTable } from "../layout/DataTable";
+import { TransactionsTable } from "./DataTable";
 
-export const TransactionsContainer = () => {
+export const DataContainer = ({
+  dataTitle,
+  dataButton1,
+  dattaButton2,
+  dateFilter, 
+  statusFilter, 
+  transactionFilter
+}) => {
   return (
     <>
       <div className="transactions-container shadow-box h-80">
         <div className="transactions-container-header flex justify-between items-center">
-          <h3 className="text-xl font-bold">Transaction History</h3>
+          <h3 className="text-xl font-bold">{dataTitle}</h3>
           <div className="flex gap-2">
             <Button className="hover:bg-chart-2">
               <FileOutput size={20} />
-              Export File
+              {dataButton1}
             </Button>
             <Button className="bg-chart-5">
-              <Plus size={20} /> New Transaction
+              <Plus size={20} /> {dattaButton2}
             </Button>
           </div>
         </div>
@@ -48,31 +55,15 @@ export const TransactionsContainer = () => {
               <SelectValue placeholder="Filters" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="date">Date</SelectItem>
-              <SelectItem value="status">Status</SelectItem>
+              <SelectItem value="date">{dateFilter}</SelectItem>
+              <SelectItem value="status">{statusFilter}</SelectItem>
               <SelectItem value="transactionNumber">
-                Transaction Number
+               {transactionFilter}
               </SelectItem>
             </SelectContent>
           </Select>
         </div>
 
-        <div className="transaction-container-history">
-          <DataTable
-            companyTable={"Company Name"}
-            transactionTable={"Transaction ID"}
-            amountTable={"Amount"}
-            statusTable={"Status"}
-            dateTable={"Date"}
-            timeTable={"Time"}
-            companyData={"Interconxs"}
-            transactionData={1245}
-            amoutData={3500}
-            statusData={"pending"}
-            dateData={"2023-08-23"}
-            timeData={1000}
-          ></DataTable>
-        </div>
       </div>
     </>
   );

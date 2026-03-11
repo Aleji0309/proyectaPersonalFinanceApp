@@ -1,6 +1,6 @@
 import { Hotel, ArrowRightLeft, CircleDollarSign, RefreshCcw, CalendarDays, Clock4 } from "lucide-react";
 
-export const TransactionsTable = ({ companyTitle,companyData, transactionData , amoutData, statusData, dateData, timeData}) => {
+export const DataTable = ({ companyTable, transactionTable, amountTable, statusTable, dateTable, timeTable, companyData, transactionData , amoutData, statusData, dateData, timeData}) => {
   return (
     <div class="table_component" role="region" tabindex="0">
       <table>
@@ -9,42 +9,42 @@ export const TransactionsTable = ({ companyTitle,companyData, transactionData , 
             <th>
               <div className="flex items-center gap-2">
                 <Hotel size={18} />
-                {companyTitle}
+                {companyTable}
               </div>
             </th>
 
             <th>
               <div className="flex items-center gap-2">
                 <ArrowRightLeft size={18} />
-                Transaction Number
+                {transactionTable}
               </div>
             </th>
 
             <th>
               <div className="flex items-center gap-2">
                 <CircleDollarSign size={18} />
-                Amount
+                {amountTable}
               </div>
             </th>
 
             <th>
               <div className="flex items-center gap-2">
                 <RefreshCcw size={18} />
-                Status
+                {statusTable}
               </div>
             </th>
 
             <th>
               <div className="flex items-center gap-2">
                 <CalendarDays size={18} />
-                Date
+                {dateTable}
               </div>
             </th>
 
             <th>
               <div className="flex items-center gap-2">
                 <Clock4 size={18} />
-                Time
+                {timeTable}
               </div>
             </th>
           </tr>
