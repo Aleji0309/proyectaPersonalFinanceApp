@@ -1,6 +1,30 @@
-import { Hotel, ArrowRightLeft, CircleDollarSign, RefreshCcw, CalendarDays, Clock4 } from "lucide-react";
+import {
+  Hotel,
+  ArrowRightLeft,
+  CircleDollarSign,
+  RefreshCcw,
+  CalendarDays,
+  Clock4,
+} from "lucide-react";
+import { transactionsMock } from "../transactions/TransactionsContainer";
 
-export const DataTable = ({ companyTable, transactionTable, amountTable, statusTable, dateTable, timeTable, companyData, transactionData , amoutData, statusData, dateData, timeData}) => {
+export const DataTable = ({
+  companyTable,
+  transactionTable,
+  amountTable,
+  statusTable,
+  dateTable,
+  timeTable,
+  companyData,
+  transactionData,
+  amountData,
+  statusData,
+  dateData,
+  timeData,
+}) => {
+  console.log("test de ale mock ");
+  console.log(transactionsMock);
+
   return (
     <div class="table_component" role="region" tabindex="0">
       <table>
@@ -50,14 +74,14 @@ export const DataTable = ({ companyTable, transactionTable, amountTable, statusT
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{companyData}</td>
-            <td>{transactionData}</td>
-            <td>{amoutData}</td>
-            <td>{statusData}</td>
-            <td>{dateData}</td>
-            <td>{timeData}</td>
-          </tr>
+          {transactionsMock.map((transaction) => {
+            return (
+              <tr key={transaction.transactionData}>
+                <td>{transaction.companyData}</td>
+                <td>{transaction.amountData}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
