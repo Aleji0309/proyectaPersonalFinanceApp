@@ -3,44 +3,44 @@ import { DataTable } from "../layout/DataTable";
 
 export const recurringBillsMock = [
   {
-    billName: "Netflix",
-    category: "Entertainment",
-    amount: 249,
-    frequency: "Monthly",
-    nextDueDate: "2026-03-25",
-    status: "upcoming",
+    firstColumn: "Netflix",
+    secondColumn: "Entertainment",
+    thirdColumn: 249,
+    fourthColumn: "Monthly",
+    fifthColumn: "2026-03-25",
+    sixthColumn: "upcoming",
   },
   {
-    billName: "Spotify",
-    category: "Entertainment",
-    amount: 129,
-    frequency: "Monthly",
-    nextDueDate: "2026-03-28",
-    status: "paid",
+    firstColumn: "Spotify",
+    secondColumn: "Entertainment",
+    thirdColumn: 129,
+    fourthColumn: "Monthly",
+    fifthColumn: "2026-03-28",
+    sixthColumn: "paid",
   },
   {
-    billName: "Internet Telmex",
-    category: "Utilities",
-    amount: 599,
-    frequency: "Monthly",
-    nextDueDate: "2026-03-22",
-    status: "overdue",
+    firstColumn: "Internet Telmex",
+    secondColumn: "Utilities",
+    thirdColumn: 599,
+    fourthColumn: "Monthly",
+    fifthColumn: "2026-03-22",
+    sixthColumn: "overdue",
   },
   {
-    billName: "Electricity CFE",
-    category: "Utilities",
-    amount: 720,
-    frequency: "Monthly",
-    nextDueDate: "2026-03-30",
-    status: "upcoming",
+    firstColumn: "Electricity CFE",
+    secondColumn: "Utilities",
+    thirdColumn: 720,
+    fourthColumn: "Monthly",
+    fifthColumn: "2026-03-30",
+    sixthColumn: "upcoming",
   },
   {
-    billName: "iCloud Storage",
-    category: "Subscriptions",
-    amount: 49,
-    frequency: "Monthly",
-    nextDueDate: "2026-03-27",
-    status: "paid",
+    firstColumn: "iCloud Storage",
+    secondColumn: "Subscriptions",
+    thirdColumn: 49,
+    fourthColumn: "Monthly",
+    fifthColumn: "2026-03-27",
+    sixthColumn: "paid",
   },
 ];
 
@@ -48,8 +48,9 @@ const RecurringContainer = () => {
   return (
     <>
       <div className="recurring-container">
-        <DataTable
-          companyTable={"Bill Name"}
+        <DataTable 
+            data={recurringBillsMock}
+            companyTable={"Bill Name"}
             transactionIdTable={"Category"}
             amountTable={"Amount"}
             statusTable={"Frecuency"}

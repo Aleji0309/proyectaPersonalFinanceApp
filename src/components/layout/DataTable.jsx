@@ -6,24 +6,17 @@ import {
   CalendarDays,
   Clock4,
 } from "lucide-react";
-import { transactionsMock } from "../transactions/TransactionsContainer";
 
 export const DataTable = ({
+  data,
   companyTable,
   transactionIdTable,
   amountTable,
   statusTable,
   dateTable,
   timeTable,
-  // companyData,
-  // transactionIdData,
-  // amountData,
-  // statusData,
-  // dateData,
-  // timeData,
 }) => {
-  console.log("test de ale mock ");
-  console.log(transactionsMock);
+ 
 
   return (
     <div class="table_component" role="region" tabindex="0">
@@ -74,16 +67,19 @@ export const DataTable = ({
           </tr>
         </thead>
         <tbody>
-          {transactionsMock.map((transaction) => {
+          {data.map((dataInfo) => {
+            console.log("''''''''''''''''''''''")
+            console.log(dataInfo)
             return (
-              <tr key={transaction.transactionId}>
-                <td>{transaction.companyData}</td>
-                <td>{transaction.transactionIdData}</td>
-                <td>{transaction.amountData}</td>
-                <td>{transaction.statusData}</td>
-                <td>{transaction.dateData}</td>
-                <td>{transaction.timeData}</td>
+              <tr key={data}>
+                <td>{dataInfo.firstColumn}</td>
+                <td>{dataInfo.secondColumn}</td>
+                <td>{dataInfo.thirdColumn}</td>
+                <td>{dataInfo.fourthColumn}</td>
+                <td>{dataInfo.fifthColumn}</td>
+                <td>{dataInfo.sixthColumn}</td>
               </tr>
+              
             );
           })}
         </tbody>
