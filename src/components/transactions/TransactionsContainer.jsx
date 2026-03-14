@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/select";
 import { DataTable } from "../layout/DataTable";
 
-
- export const transactionsMock = [
+const transactionsMock = [
   {
     firstColumn: "Intercon",
     secondColumn: 1245,
@@ -95,8 +94,18 @@ import { DataTable } from "../layout/DataTable";
   },
 ];
 
+const transactionsHeaderMock = [
+  {
+    firstRow: "Company Name",
+    secondRow: "Transaction ID",
+    thirdRow: "Amount",
+    fourthRow: "Status",
+    fifthRow: "Date",
+    sixthRow: "Time",
+  },
+];
+
 export const TransactionsContainer = () => {
-   
   return (
     <>
       <div className="transactions-container shadow-box h-80">
@@ -145,14 +154,8 @@ export const TransactionsContainer = () => {
         <div className="transaction-container-history">
           <DataTable
             data={transactionsMock}
-            companyTable={"Company Name"}
-            transactionIdTable={"Transaction ID"}
-            amountTable={"Amount"}
-            statusTable={"Status"}
-            dateTable={"Date"}
-            timeTable={"Time"}
+            dataHeader={transactionsHeaderMock}
           ></DataTable>
-
         </div>
       </div>
     </>
