@@ -15,12 +15,12 @@ export const DataTable = ({
   statusTable,
   dateTable,
   timeTable,
-  companyData,
-  transactionIdData,
-  amountData,
-  statusData,
-  dateData,
-  timeData,
+  // companyData,
+  // transactionIdData,
+  // amountData,
+  // statusData,
+  // dateData,
+  // timeData,
 }) => {
   console.log("test de ale mock ");
   console.log(transactionsMock);

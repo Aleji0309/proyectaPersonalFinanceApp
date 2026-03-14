@@ -48,7 +48,14 @@ const RecurringContainer = () => {
   return (
     <>
       <div className="recurring-container">
-        <DataTable></DataTable>
+        <DataTable
+          companyTable={"Bill Name"}
+            transactionIdTable={"Category"}
+            amountTable={"Amount"}
+            statusTable={"Frecuency"}
+            dateTable={"Next Due Date"}
+            timeTable={"Status"}
+        ></DataTable>
       </div>
     </>
   );
