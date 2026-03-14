@@ -132,6 +132,14 @@
   font-size: 0.8rem;
 }
 
+
+.savings-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

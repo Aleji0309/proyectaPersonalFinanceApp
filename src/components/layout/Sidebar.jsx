@@ -77,7 +77,7 @@ export const Sidebar = () => {
         </Link>
 
         <Link
-          href="/pots"
+          href="/savings"
           className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                     text-(--text-secondary)
                     hover:bg-white hover:text-black
