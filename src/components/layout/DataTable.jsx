@@ -10,12 +10,6 @@ import {
 export const DataTable = ({
   data,
   dataHeader,
-  companyTable,
-  transactionIdTable,
-  amountTable,
-  statusTable,
-  dateTable,
-  timeTable,
 }) => {
   return (
     <div class="table_component" role="region" tabindex="0">

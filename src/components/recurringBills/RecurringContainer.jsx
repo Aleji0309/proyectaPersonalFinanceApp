@@ -1,7 +1,7 @@
 import React from "react";
 import { DataTable } from "../layout/DataTable";
 
-export const recurringBillsMock = [
+const recurringBillsMock = [
   {
     firstColumn: "Netflix",
     secondColumn: "Entertainment",
@@ -44,18 +44,26 @@ export const recurringBillsMock = [
   },
 ];
 
+const recurringBillsHeader = [
+  {firstRow:"Bill Name",
+    secondRow: "Category",
+    thirdRow: "Amount",
+    fourthRow: "Frecuency",
+    fifthRow: "Next Dute Date",
+    sixthRow: "Status",
+  }
+
+]
+
+
+
 const RecurringContainer = () => {
   return (
     <>
       <div className="recurring-container">
         <DataTable 
             data={recurringBillsMock}
-            companyTable={"Bill Name"}
-            transactionIdTable={"Category"}
-            amountTable={"Amount"}
-            statusTable={"Frecuency"}
-            dateTable={"Next Due Date"}
-            timeTable={"Status"}
+            dataHeader={recurringBillsHeader}
         ></DataTable>
       </div>
     </>
