@@ -10,13 +10,13 @@ import { transactionsMock } from "../transactions/TransactionsContainer";
 
 export const DataTable = ({
   companyTable,
-  transactionTable,
+  transactionIdTable,
   amountTable,
   statusTable,
   dateTable,
   timeTable,
   companyData,
-  transactionData,
+  transactionIdData,
   amountData,
   statusData,
   dateData,
@@ -40,7 +40,7 @@ export const DataTable = ({
             <th>
               <div className="flex items-center gap-2">
                 <ArrowRightLeft size={18} />
-                {transactionTable}
+                {transactionIdTable}
               </div>
             </th>
 
@@ -76,9 +76,13 @@ export const DataTable = ({
         <tbody>
           {transactionsMock.map((transaction) => {
             return (
-              <tr key={transaction.transactionData}>
+              <tr key={transaction.transactionId}>
                 <td>{transaction.companyData}</td>
+                <td>{transaction.transactionIdData}</td>
                 <td>{transaction.amountData}</td>
+                <td>{transaction.statusData}</td>
+                <td>{transaction.dateData}</td>
+                <td>{transaction.timeData}</td>
               </tr>
             );
           })}

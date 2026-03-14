@@ -15,7 +15,7 @@ import { DataTable } from "../layout/DataTable";
  export const transactionsMock = [
   {
     companyData: "Intercon",
-    transactionData: 1245,
+    transactionIdData: 1245,
     amountData: 3500,
     statusData: "pending",
     dateData: "2023-08-23",
@@ -23,7 +23,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Nu Bank",
-    transactionData: 1246,
+    transactionIdData: 1246,
     amountData: 820,
     statusData: "completed",
     dateData: "2023-08-24",
@@ -31,7 +31,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Amazon",
-    transactionData: 1247,
+    transactionIdData: 1247,
     amountData: 1299,
     statusData: "completed",
     dateData: "2023-08-24",
@@ -39,7 +39,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Netflix",
-    transactionData: 1248,
+    transactionIdData: 1248,
     amountData: 249,
     statusData: "pending",
     dateData: "2023-08-25",
@@ -47,7 +47,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Spotify",
-    transactionData: 1249,
+    transactionIdData: 1249,
     amountData: 129,
     statusData: "completed",
     dateData: "2023-08-25",
@@ -55,7 +55,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Apple",
-    transactionData: 1250,
+    transactionIdData: 1250,
     amountData: 2200,
     statusData: "completed",
     dateData: "2023-08-26",
@@ -63,7 +63,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Uber",
-    transactionData: 1251,
+    transactionIdData: 1251,
     amountData: 180,
     statusData: "pending",
     dateData: "2023-08-26",
@@ -71,7 +71,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Airbnb",
-    transactionData: 1252,
+    transactionIdData: 1252,
     amountData: 4500,
     statusData: "completed",
     dateData: "2023-08-27",
@@ -79,7 +79,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "Telmex",
-    transactionData: 1253,
+    transactionIdData: 1253,
     amountData: 899,
     statusData: "pending",
     dateData: "2023-08-27",
@@ -87,7 +87,7 @@ import { DataTable } from "../layout/DataTable";
   },
   {
     companyData: "CFE",
-    transactionData: 1254,
+    transactionIdData: 1254,
     amountData: 670,
     statusData: "completed",
     dateData: "2023-08-28",
@@ -145,7 +145,7 @@ export const TransactionsContainer = () => {
         <div className="transaction-container-history">
           <DataTable
             companyTable={"Company Name"}
-            transactionTable={"Transaction ID"}
+            transactionIdTable={"Transaction ID"}
             amountTable={"Amount"}
             statusTable={"Status"}
             dateTable={"Date"}
