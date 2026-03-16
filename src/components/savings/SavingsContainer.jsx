@@ -3,6 +3,7 @@ import { Field, FieldLabel } from "@/components/ui/field";
 import { Progress } from "@/components/ui/progress";
 import { Plus} from "lucide-react";
 import { SavingsGoalCard } from "./SavingsGoalCard";
+import { Button } from "@/components/ui/button";
 
 
 const savingsMock = [
@@ -51,9 +52,11 @@ const savingsMock = [
 const SavingsContainer = () => {
   return (
     <>
-      <div className="savings-containers">
+    
+      <div className="savings-containers a">
         <div className="savings-header">
           <h3>Goals</h3>
+         
           <div className="progress-container">
             <Field className="w-full max-w-sm">
               <FieldLabel htmlFor="progress-upload">
@@ -75,9 +78,11 @@ const SavingsContainer = () => {
           </div>
 
           <div className="savings-info mt-14">
-            <div className="saving-header flex">
+            <div className="saving-header flex gap-4">
               <h3>Monthly Goal</h3>
-              <Plus size={20} />
+               <Button className="bg-blue-500">
+              <Plus size={20} /> New Transaction
+            </Button>
             </div>
 
             <div className="savings-data">

@@ -5,7 +5,6 @@ export const SavingsGoalCard = ({ data }) => {
   return (
     <>
       <div>
-        
         {data.map((dataSaving) => {
           return (
             <div key={dataSaving.name} className="mt-6">
@@ -16,19 +15,14 @@ export const SavingsGoalCard = ({ data }) => {
                   color={dataSaving.color}
                 ></ProgressRing>
                 <p>{dataSaving.progress}%</p>
-              <div className="base-circle"> {dataSaving.name}</div>
-              <div className="flex gap-2">
-                <div className="amount-container flex gap-2 justify-center items-center ">
-                <div className="saved-amount">${dataSaving.saved}</div> <p>/</p>
-                <div className="saved-amount">${dataSaving.goal}</div>
+                <div className="base-circle"> {dataSaving.name}</div>
+                <div className="flex gap-2">
+                  <div className="amount-container flex gap-2 justify-center items-center ">
+                    <div className="saved-amount">${dataSaving.saved}</div>{" "}
+                    <p>/</p>
+                    <div className="saved-amount">${dataSaving.goal}</div>
+                  </div>
                 </div>
-               
-                 
-              </div>
-
-                
-               
-
               </div>
             </div>
           );

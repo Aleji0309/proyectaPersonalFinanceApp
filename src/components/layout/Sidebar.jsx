@@ -59,7 +59,7 @@ export const Sidebar = () => {
           <span>Transactions</span>
         </Link>
 
-        <Link
+        {/* <Link
           href="/budgets"
           className="group flex items-center gap-3 rounded-r-lg w-3xs  px-3 py-2
                     text-(--text-secondary)
@@ -74,7 +74,7 @@ export const Sidebar = () => {
                     transition-colors"
           />
           <span>Budgets</span>
-        </Link>
+        </Link> */}
 
         <Link
           href="/savings"
