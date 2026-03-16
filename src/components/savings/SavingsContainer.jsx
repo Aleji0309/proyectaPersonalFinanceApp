@@ -1,15 +1,16 @@
 import React from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { Progress } from "@/components/ui/progress";
-import { Plus } from "lucide-react";
+import { Plus} from "lucide-react";
 import { SavingsGoalCard } from "./SavingsGoalCard";
+
 
 const savingsMock = [
   {
     name: "Emergency Fund",
     saved: 3200,
     goal: 5000,
-    progress: 64,
+    progress: 24,
     icon: "heart",
     color: "#ef4444"
   },
@@ -32,7 +33,7 @@ const savingsMock = [
   {
     name: "Gaming Console",
     saved: 250,
-    goal: 600,
+    goal: 6000,
     progress: 42,
     icon: "gamepad-2",
     color: "#8b5cf6"
@@ -50,7 +51,7 @@ const savingsMock = [
 const SavingsContainer = () => {
   return (
     <>
-      <div className="savings-containers bg-amber-300">
+      <div className="savings-containers">
         <div className="savings-header">
           <h3>Goals</h3>
           <div className="progress-container">
@@ -73,7 +74,7 @@ const SavingsContainer = () => {
             </div>
           </div>
 
-          <div className="savings-info">
+          <div className="savings-info mt-14">
             <div className="saving-header flex">
               <h3>Monthly Goal</h3>
               <Plus size={20} />
