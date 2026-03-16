@@ -9,7 +9,7 @@ const iconMap = {
   car: Car
 };
 export const ProgressRing = ({ progress, icon, color}) => {
-  const radius = 30;
+  const radius = 25;
   const circumference = 2 * Math.PI * radius;
 
   const offset = circumference - (progress / 100) * circumference;
