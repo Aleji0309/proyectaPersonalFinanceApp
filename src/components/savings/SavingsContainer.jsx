@@ -1,10 +1,9 @@
 import React from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { Progress } from "@/components/ui/progress";
-import { Plus} from "lucide-react";
+import { Plus } from "lucide-react";
 import { SavingsGoalCard } from "./SavingsGoalCard";
 import { Button } from "@/components/ui/button";
-
 
 const savingsMock = [
   {
@@ -13,7 +12,7 @@ const savingsMock = [
     goal: 5000,
     progress: 24,
     icon: "heart",
-    color: "#ef4444"
+    color: "#ef4444",
   },
   {
     name: "Vacation Trip",
@@ -21,7 +20,7 @@ const savingsMock = [
     goal: 3000,
     progress: 60,
     icon: "map-pin",
-    color: "#3b82f6"
+    color: "#3b82f6",
   },
   {
     name: "New Laptop",
@@ -29,7 +28,7 @@ const savingsMock = [
     goal: 2000,
     progress: 45,
     icon: "laptop",
-    color: "#10b981"
+    color: "#10b981",
   },
   {
     name: "Gaming Console",
@@ -37,7 +36,7 @@ const savingsMock = [
     goal: 6000,
     progress: 42,
     icon: "gamepad-2",
-    color: "#8b5cf6"
+    color: "#8b5cf6",
   },
   {
     name: "Car Down Payment",
@@ -45,53 +44,53 @@ const savingsMock = [
     goal: 15000,
     progress: 48,
     icon: "car",
-    color: "#f97316"
-  }
+    color: "#f97316",
+  },
 ];
 
 const SavingsContainer = () => {
   return (
     <>
-    
-      <div className="savings-containers a">
-        <div className="savings-header">
-          <h3>Goals</h3>
-         
-          <div className="progress-container">
-            <Field className="w-full max-w-sm">
+      <div className="savings-containers">
+        <div className="savings-header w-[80%] h-65 mt-8 bg-gray-10 border border-gray-100 rounded-xl p-4 shadow-sm">
+          <h3 className="font-bold p-2 text-xl">Summary</h3>
+          <div className="progress-container px-4 py-2 w-[100%] mx-auto h-40 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <Field className="w-full max-full">
               <FieldLabel htmlFor="progress-upload">
-                <span>Upload progress</span>
-                <span className="ml-auto">66%</span>
+                <div className="savings-summary flex gap-10 text-lg w-full h-10 mt-4">
+                  <div className="saved-container flex gap-2 justify-between w-[50%]">
+                    <p>Total Saved</p>
+                    <p>$6,348</p>
+                  </div>
+                  <p>|</p>
+                  <div className="planned-container flex gap-2 justify-between w-[50%]">
+                    <p>Overall Progress</p>
+                    <span className="ml-auto">66%</span>
+                  </div>
+                </div>
+                
               </FieldLabel>
               <Progress value={66} id="progress-upload" />
+              <div className="goal-info flex gap-4 text-2xl">
+                <p>$6,348</p>
+                <p>$8,000</p>
+              </div>
             </Field>{" "}
           </div>
-          <div className="savings-summary flex gap-4">
-            <div className="saved-container">
-              <p>Saved</p>
-              <p>$6,348</p>
-            </div>
-            <div className="planned-container">
-              <p>Planned</p>
-              <p>$8000</p>
-            </div>
+          
+        </div>
+
+        <div className="savings-info mt-14 w-[80%]">
+          <div className="saving-header flex gap-4 justify-between">
+            <h3 className="text-xl" >Monthly Goals</h3>
+            <Button className="p-4 text-lg">
+              <Plus size={20} /> Add Goal
+            </Button>
           </div>
 
-          <div className="savings-info mt-14">
-            <div className="saving-header flex gap-4">
-              <h3>Monthly Goal</h3>
-               <Button className="bg-blue-500">
-              <Plus size={20} /> New Transaction
-            </Button>
-            </div>
-
-            <div className="savings-data">
-                {/* reenderizar el commponente SavingsGoalCard*/}
-                <SavingsGoalCard
-                    data={savingsMock}
-                ></SavingsGoalCard>
-                
-            </div>
+          <div className="savings-data mt-8">
+            {/* reenderizar el commponente SavingsGoalCard*/}
+            <SavingsGoalCard data={savingsMock}></SavingsGoalCard>
           </div>
         </div>
       </div>

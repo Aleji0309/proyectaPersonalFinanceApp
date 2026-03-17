@@ -71,6 +71,12 @@
   -moz-box-shadow: 4px 9px 17px -2px rgba(0, 0, 0, 0.75);
 }
 
+.shadow-box-savings {
+  box-shadow: 6px 8px 19px -12px rgba(0,0,0,1);
+-webkit-box-shadow: 6px 8px 19px -12px rgba(0,0,0,1);
+-moz-box-shadow: 6px 8px 19px -12px rgba(0,0,0,1);
+}
+
 .flex-containers {
   display: flex;
   align-items: center;
